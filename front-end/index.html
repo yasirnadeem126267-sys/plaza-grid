@@ -37,28 +37,79 @@
         </div>
     </div>
  <!--Topbar end-->
- <!--header start-->
-  <header>
-    <img src="images/ecommerce-logo.jfif" width="90px" height="80px" id="logo-image" alt="">
-    <div id="location">A-1 Standard <span style="font-weight: 200;">Pakistan <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg></span></div>
-    <h1 id="nav-head">Digital Plaza Grid</h1>
-    <input type="text" placeholder="Search here..." id="input1"><br>
-    <svg  id="trolly"  xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#0000F5"><path d="M231.83-102.64Q210-124.62 210-155.47q0-30.86 21.98-52.7Q253.95-230 284.81-230t52.69 21.98q21.83 21.97 21.83 52.83t-21.97 52.69q-21.98 21.83-52.83 21.83-30.86 0-52.7-21.97Zm400 0Q610-124.62 610-155.47q0-30.86 21.98-52.7Q653.95-230 684.81-230t52.69 21.98q21.83 21.97 21.83 52.83t-21.97 52.69q-21.98 21.83-52.83 21.83-30.86 0-52.7-21.97ZM238.67-734 344-515.33h285.33l120-218.67H238.67ZM206-800.67h589.38q22.98 0 34.97 20.84 11.98 20.83.32 41.83L693.33-490.67q-11 19.34-28.87 30.67-17.87 11.33-39.13 11.33H324l-52 96h487.33V-286H278q-43 0-63-31.83-20-31.84-.33-68.17l60.66-111.33-149.33-316H47.33V-880h121.34L206-800.67Zm138 285.34h285.33H344Z"/></svg> <!--Shopping Card -->
-    
-    <nav>
-      
-        <a href="" class="anchor">Home</a>
-        <a href="" class="anchor">Images</a>
-        <a href="" class="anchor">Videos</a>
-        <a href="" class="anchor">Products</a>
-        <a href="" class="anchor">About </a>
-        <a href="" class="anchor">Contact</a>
-      
-    </nav>
-     <button id="btn">Sign In</button>
-  </header>
- <!--HERO SECTION -->
-
+ <!--Navbar start-->
+ <nav>
+<div class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand logo" href="#">
+                Plaza<span>grid</span>
+            </a>
+            <!-- MOBILE TOGGLE -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <!-- CATEGORIES BUTTON -->
+                <button class="category-btn ms-lg-4">
+                    <i class="bi bi-grid"></i>
+                    Categories
+                </button>
+                <!-- SEARCH -->
+                <form class="search-box mx-lg-4 my-3 my-lg-0">
+                    <input
+                        type="search"
+                        placeholder="Search for products..."
+                        id="searchInput"
+                    >
+                    <button type="button" id="searchBtn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <!-- RIGHT SIDE -->
+                <div class="nav-actions ms-lg-auto d-flex  ">
+                    <!-- ACCOUNT -->
+                    <a href="#" class="nav-action me-3">    
+                    <div>
+                            <button class="btn btn-success">Sign In</button>
+                        </div>
+                    </a>
+                    <!-- CART -->
+                    <a href="#" class="nav-action cart-link d-flex" id="cart">
+                         <div>
+                            <small>Your</small>
+                            <strong>Cart</strong>
+                        </div>
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-count" id="cartCount">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div> <!--1st div close-->
+  <div class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-md">
+    <!--Links div-->
+    <div class="w-50">
+    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="#">Shop</a>
+    <a class="navbar-brand" href="#">Products</a>
+    <a class="navbar-brand" href="#">Servies</a>
+    <a class="navbar-brand" href="#">About</a>
+    <a class="navbar-brand" href="#">Contact</a>
+    </div> <!--Links div end-->
+  </div>
+</div> <!--2nd div close-->
+</nav>
+<!--Navbar end-->
 <section class="hero-section container">
 
     <div class="container">
