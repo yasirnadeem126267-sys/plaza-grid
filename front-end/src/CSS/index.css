@@ -611,7 +611,7 @@ a:hover{
    main{
      margin-top: 5px;
       width: 100%;
-      background-color: blueviolet;
+      
     }
 
 
@@ -805,10 +805,7 @@ a:hover{
   
 }
  aside{
-  margin: 2px;
- 
-  background-color: greenyellow;
-  
+  margin: 2px; 
 }
 
 #asid1{
@@ -828,7 +825,8 @@ a:hover{
  linear-gradient(rgba(32,32,45,0.5),rgba(130, 207, 120, 0.5)),url(images/amazon.png);
     background-repeat: no-repeat;
    background-size: cover;
-    
+    margin-top: 10px;
+   margin-bottom: 5px;
    
 }
 .main-footer {
@@ -969,4 +967,7 @@ a:hover{
         flex-direction: column;
         gap: 10px;
     }
+}
+.navbar-brand:hover{
+    color: orange;
 }
