@@ -1,0 +1,145 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #292929;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    color: #222;
+}
+
+.navbar-brand span {
+    color: #f47721;
+}
+
+.btn-orange {
+    background-color: #f47721;
+    color: white;
+    border: 1px solid #f47721;
+}
+
+.btn-orange:hover {
+    background-color: #dc6518;
+    color: white;
+}
+
+.btn-outline-orange {
+    color: #f47721;
+    border: 1px solid #f47721;
+}
+
+.btn-outline-orange:hover {
+    background-color: #f47721;
+    color: white;
+}
+
+.page-heading h2 {
+    font-weight: 700;
+}
+
+.profile-card {
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 28px;
+    max-width: 850px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+
+.profile-header h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-control {
+    padding: 11px 12px;
+    border-color: #ddd;
+}
+
+.form-control:focus {
+    border-color: #f47721;
+    box-shadow: 0 0 0 0.2rem rgba(244, 119, 33, 0.12);
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.success-message {
+    color: #198754;
+    font-weight: 600;
+}
+
+.quick-links {
+    max-width: 850px;
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.quick-links a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px 20px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-links a:last-child {
+    border-bottom: none;
+}
+
+.quick-links a:hover {
+    background-color: #fff8f3;
+}
+
+.quick-links a i:first-child {
+    color: #f47721;
+    font-size: 20px;
+}
+
+.quick-links a i:last-child {
+    margin-left: auto;
+    color: #888;
+}
+
+.quick-links span {
+    font-weight: 600;
+}
+
+footer {
+    background-color: white;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+}
+
+@media (max-width: 576px) {
+
+    .profile-card {
+        padding: 18px;
+    }
+
+    .profile-header h4 {
+        font-size: 19px;
+    }
+
+}
