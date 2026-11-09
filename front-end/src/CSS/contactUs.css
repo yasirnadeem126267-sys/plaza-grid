@@ -1,0 +1,100 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #292929;
+}
+
+
+
+.btn-orange {
+    background-color: #f47721;
+    color: white;
+    border: 1px solid #f47721;
+}
+
+.btn-orange:hover {
+    background-color: #dc6518;
+    color: white;
+}
+
+.btn-outline-orange {
+    color: #f47721;
+    border: 1px solid #f47721;
+}
+
+
+.page-heading h2 {
+    font-weight: 700;
+}
+
+.contact-info-card,
+.contact-form-card {
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    padding: 28px;
+    height: 100%;
+}
+
+.contact-info-card h4,
+.contact-form-card h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.contact-icon {
+    width: 21px;
+    height: 30px;
+    min-width: 43px;
+    background-color: #fff0e5;
+    color: #f47721;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.contact-item h6 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    
+    font-size: 14px;
+    margin-bottom: 3px;
+    overflow-wrap: anywhere;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.form-select {
+    padding: 11px 12px;
+    border-color: #ddd;
+}
+
+@media (max-width: 576px) {
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 20px;
+    }
+
+    .page-heading h2 {
+        font-size: 25px;
+    }
+
+}
