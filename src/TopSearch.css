@@ -1,0 +1,292 @@
+*{
+      padding:0%;
+      margin: 0%;
+    }
+    .top-bar {
+    background-color: #111827;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 8px 0;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+.top-links {
+    display: flex;
+    gap: 20px;
+}
+
+.top-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+    header{
+      width: 100%;
+      height: 145px;
+      background-color: aqua;
+     
+    }
+   
+    
+ 
+  
+   #input1{
+    margin-top: 22px;
+    margin-left: 250px;
+    width: 250px;
+  padding: 8px;
+   }
+ 
+  @keyframes direct{
+     from {
+      transform: translateX();
+
+     }
+      to {transform: translateX(175px);}
+     }
+    #trolly{
+      animation: direct 4s;
+      animation-iteration-count: infinite;
+     animation-timing-function: ease-in-out;
+     animation-direction: alternate;
+    }
+  
+ /* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    background-color: #111827;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 8px 0;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+.top-links {
+    display: flex;
+    gap: 20px;
+}
+
+.top-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.main-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 0;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827 !important;
+}
+
+.logo span {
+    color: #ff6b35;
+}
+
+
+/* =========================
+   CATEGORY BUTTON
+========================= */
+
+.category-btn {
+    border: none;
+    background-color: #f3f4f6;
+    color: #111827;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.category-btn i {
+    margin-right: 6px;
+}
+
+.category-btn:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    border: 2px solid #ff6b35;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 11px 15px;
+    font-size: 14px;
+}
+
+.search-box button {
+    width: 52px;
+    border: none;
+    background-color: #ff6b35;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.search-box button:hover {
+    background-color: #e85b2b;
+}
+
+
+/* =========================
+   NAV ACTIONS
+========================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #111827;
+    text-decoration: none;
+}
+
+.nav-action > i {
+    font-size: 25px;
+}
+
+.nav-action div {
+    display: flex;
+    flex-direction: column;
+}
+#cart:hover{
+border:  1px solid gray;
+border-radius: 5px;
+}
+
+.nav-action small {
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.nav-action strong {
+    font-size: 14px;
+}
+
+
+
+
+/* =========================
+   CART COUNT
+========================= */
+
+.cart-count {
+    position: absolute;
+    top: -9px;
+    left: 14px;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #ff6b35;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .top-links {
+        display: none;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .nav-actions {
+        margin-top: 15px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .top-bar {
+        text-align: center;
+    }
+
+    .top-bar .container > div {
+        justify-content: center !important;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+}
+a:hover{
+  color: blue;
+}
+  
+   #btn:hover{
+    width: 84px;
+    height: 40px;
+    background-color: rgb(16, 13, 187);
+   }
+ 
+
+.navbar-brand:hover{
+    color: orange;
+}

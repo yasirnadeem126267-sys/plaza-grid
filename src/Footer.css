@@ -1,0 +1,139 @@
+.main-footer {
+    background: #111827;
+    color: #ffffff;
+    padding: 75px 0 0;
+}
+.footer-main {
+    padding-bottom: 55px;
+}
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.footer-logo i {
+    color:white;
+}
+.footer-logo span {
+    color: white;
+}
+.footer-description {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 310px;
+    margin-bottom: 24px;
+}
+.footer-socials {
+    display: flex;
+    gap: 11px;
+}
+.footer-socials a {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #253044;
+    color: #ffffff;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+.footer-socials a:hover {
+    transform: translateY(-4px);
+}
+.footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 23px;
+    color: #ffffff;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 13px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+.footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.footer-links a:hover {
+    color: #f59e0b;
+    padding-left: 4px;
+}
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    line-height: 1.6;
+}
+.footer-contact i {   
+    font-size: 15px;
+    margin-top: 2px;
+}
+.footer-bottom {
+    border-top: 1px solid #293548;
+    padding: 23px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer-bottom p {
+    color: #9ca3af;
+    font-size: 13px;
+    margin: 0;
+}
+.footer-bottom-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+.footer-bottom-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+.footer-bottom-links a:hover {
+    color: #f59e0b;
+}
+@media (max-width: 767px) {
+    .main-footer {
+        padding-top: 50px;
+    }
+    .footer-main {
+        padding-bottom: 35px;
+    }
+    .footer-heading {
+        margin-bottom: 17px;
+        font-size: 15px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-bottom-links {
+        gap: 13px;
+    }
+}
+@media (max-width: 400px) {
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
