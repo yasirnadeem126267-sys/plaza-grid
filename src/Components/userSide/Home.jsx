@@ -1,10 +1,10 @@
-import React from 'react'
+
 import './Home.css'
-import hero from './assets/Hero-Image.avif'
-import video1 from './assets/video1.mp4'
-import video2 from './assets/video2.mp4'
-import video3 from './assets/video3.mp4'
-import video4 from './assets/video4.mp4'
+import hero from '../../assets/Hero-Image.avif'
+import video1 from '../../assets/video1.mp4'
+import video2 from '../../assets/video2.mp4'
+import video3 from '../../assets/video3.mp4'
+import video4 from '../../assets/video4.mp4'
 function Home() {
   return (
     <>

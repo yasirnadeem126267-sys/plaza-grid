@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Navbar from './Navbar'
-import Home from './Home'
-import ContactUs from './ContactUs'
-import Footer from './Footer'
-import SignIn from './SignIn'
-import TopSearch from './TopSearch'
+import Navbar from './Components/userSide/Navbar'
+import Home from './Components/userSide/Home'
+import ContactUs from './Components/userSide/ContactUs'
+import Footer from './Components/userSide/Footer'
+import SignIn from './Components/Authentication/SignIn'
+import TopSearch from './Components/userSide/TopSearch'
 let App=()=>{
 
 
@@ -36,13 +35,10 @@ let App=()=>{
 
 <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
 
-<Route path='./signIn' element={<SignIn></SignIn>}></Route>
+<Route path='/signIn' element={<SignIn></SignIn>}></Route>
  </Routes>
 <Footer></Footer>
 </BrowserRouter>
-
-
-
   
  
  </>
