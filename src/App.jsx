@@ -6,9 +6,9 @@ import ContactUs from './Components/userSide/ContactUs'
 import Footer from './Components/userSide/Footer'
 import SignIn from './Components/Authentication/SignIn'
 import TopSearch from './Components/userSide/TopSearch'
-
+import AdminLogin from './Components/Admin Side/AdminLogin'
+import Dashboard from './Components/Admin Side/Dashboard'
 let App=()=>{
-
 
   return(
     <>
@@ -29,9 +29,12 @@ let App=()=>{
   {/*2nd Nav bar */}
 
 <BrowserRouter>
+
 <TopSearch></TopSearch>
 <Navbar></Navbar>
 <Routes>
+  <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+  <Route path='/adminLogin' element={<AdminLogin></AdminLogin>}></Route>
  <Route path='/home' element={<Home></Home>}></Route>
 
 <Route path='/contact' element={<ContactUs></ContactUs>}></Route>

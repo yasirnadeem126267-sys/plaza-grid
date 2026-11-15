@@ -143,6 +143,7 @@
 .search-box {
     display: flex;
     flex: 1;
+    flex-direction: row;
     max-width: 600px;
     border: 2px solid #ff6b35;
     border-radius: 7px;

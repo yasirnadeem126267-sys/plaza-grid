@@ -1,0 +1,28 @@
+.font{
+    font-family: 'plus jakarta sans' , sans-serif;
+}
+.left-side{
+    background-color: #222222;
+}
+.form-parent{
+    display: flex;
+      align-items: center;
+    justify-content: center;
+}
+form{
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+}
+.forgot-password{
+    color: #f58220 ;
+}
+
+@media screen and (max-width: 992px){
+    .left-side{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+}
