@@ -1,6 +1,18 @@
-import React from 'react'
-import './SignIn.css'
+import React, { useState } from 'react'
+import './userSignIn.css'
+import { Link, useNavigate } from 'react-router-dom'
 function SignIn() {
+  let [email, setEmail]=useState("User@gmial.com");
+  let [password, setPassword]=useState("09876");
+  let navigate= useNavigate();
+  const check=(e)=>{
+    e.preventDefault();
+    if(email==="User@gmail.com" && password==="09876"){
+      navigate('/userProfile')
+    }else{
+      alert("Please enter correct credential")
+    }
+  }
   return (
     <>
     <>
@@ -75,7 +87,7 @@ function SignIn() {
             <h2>Welcome Back!</h2>
             <p>Enter your account details to continue.</p>
           </div>
-          <form id="loginForm">
+          <form id="loginForm" onSubmit={check}>
             {/* Email */}
             <div className="login-form-group">
               <label htmlFor="loginEmail">Email Address</label>
@@ -86,6 +98,7 @@ function SignIn() {
                   className="form-control"
                   placeholder="Enter your email address"
                   required=""
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -98,12 +111,13 @@ function SignIn() {
                   id="loginPassword"
                   className="form-control"
                   placeholder="Enter your password"
-                  required=""
+                  required
+                  onChange={(e)=>setPassword(e.target.value)}
                 />
                 <button
                   type="button"
                   className="login-password-toggle"
-                  onclick="toggleLoginPassword()"
+                 
                   aria-label="Show password"
                 >
                   <i className="bi bi-eye" />
@@ -130,7 +144,7 @@ function SignIn() {
             {/* Register Link */}
             <div className="login-register">
               Don't have an account?
-              <a href="register.html">Create Account</a>
+              <Link to="/signup">Create Account</Link>
             </div>
           </form>
           {/* Back to Home */}

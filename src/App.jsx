@@ -4,10 +4,12 @@ import Navbar from './Components/userSide/Navbar'
 import Home from './Components/userSide/Home'
 import ContactUs from './Components/userSide/ContactUs'
 import Footer from './Components/userSide/Footer'
-import SignIn from './Components/Authentication/SignIn'
+import SignIn from './Components/Authentication/userSignIn'
 import TopSearch from './Components/userSide/TopSearch'
 import AdminLogin from './Components/Admin Side/AdminLogin'
 import Dashboard from './Components/Admin Side/Dashboard'
+import Signup from './Components/Authentication/Signup'
+import Myprofile from './Components/userSide/Myprofile'
 let App=()=>{
 
   return(
@@ -38,8 +40,9 @@ let App=()=>{
  <Route path='/home' element={<Home></Home>}></Route>
 
 <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
-
+<Route path='/signUp' element={<Signup></Signup>}></Route>
 <Route path='/signIn' element={<SignIn></SignIn>}></Route>
+<Route path='/userProfile' element={<Myprofile></Myprofile>}></Route>
  </Routes>
 <Footer></Footer>
 </BrowserRouter>
