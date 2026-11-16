@@ -5,7 +5,105 @@ import video1 from '../../assets/video1.mp4'
 import video2 from '../../assets/video2.mp4'
 import video3 from '../../assets/video3.mp4'
 import video4 from '../../assets/video4.mp4'
+import { useState } from 'react'
 function Home() {
+  const data={
+    products:[
+      {
+        id:1,
+        name:"Laptop",
+        price: 50000,
+        img: "Laptop.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:8,
+      },
+       {
+        id:2,
+        name:"Bag",
+        price: 50000,
+        img: "bag.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:7,
+      },
+       {
+        id:3,
+        name:"Earbuds",
+        price: 50000,
+        img: "earbuds.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:12,
+      },
+       {
+        id:4,
+        name:"Mobile",
+        price: 50000,
+        img: "mobile.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:6,
+      },
+       {
+        id:5,
+        name:"Shirt",
+        price: 50000,
+        img: "shirt.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:10,
+      },
+       {
+        id:6,
+        name:"Shoes",
+        price: 50000,
+        img: "shoes.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:14,
+      },
+      {
+        id:6,
+        name:"Glasses",
+        price: 50000,
+        img: "glasses.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:4,
+      },
+      {
+        id:6,
+        name:"Charger",
+        price: 50000,
+        img: "charger.jpg",
+        rating:{
+          start: 4,
+          reviews: 50,
+        },
+        stock:10,
+      },
+    ]
+  }
+  const [value, setValue]=useState([]);
+  let add=(s)=>{
+    setValue(s)
+    console.log(value);
+  }
   return (
     <>
      <section className="hero-section container">
@@ -91,102 +189,46 @@ function Home() {
             <i className="bi bi-arrow-right ms-1" id="view-all2" />
           </a>
         </div>
-        {/* ================= CATEGORY GRID ================= */}
-        <div className="row g-3 text-center">
-          {/* =================================
-           LARGE CATEGORY 1 — ELECTRONICS
-      ================================== */}
-          <div className="col-lg-6">
-            <a href="#" className="category-card category-large d-block">
-              <img
-                src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1200&q=85"
-                alt="Electronics"
-              />
-              <div className="category-content">
-                <span>EXPLORE</span>
-                <h3>Electronics</h3>
-                <p>Latest Technology</p>
-                <i className="bi bi-arrow-up-right" />
-              </div>
-            </a>
+          {/* react actions row */}
+
+          {/* first row */}
+         <div className=" row">
+          
+         {/* Card */}
+         {
+            data.products.map((item, index)=>(
+              <div className="col-xxl-3 col-lg-3 col-md-6 col-sm-12 mb-3"  key={index}>
+                     <div className="card"  >
+  <img src={item.img} className="card-img-top" alt="..." style={{height:"170px"}}/>
+  <div className="card-body">
+    <h5 className="card-title">{item.name}</h5>
+    <p className="card-text">Rs:{item.price}</p>
+     <p className="card-text">Stock: <span style={{color:"green"}}>{item.stock}</span></p>
+    <p className='card-text'>Star:{item.rating.start} Reviews: {item.rating.reviews}</p>
+    
+    <a href="#" className="btn btn-primary" onClick={()=> add(item)}>
+      Add to card
+    </a>
+  </div>
+</div>
+ </div>
+// card end
+            ))
+         }
+        
+
+         
+         
+
+         
           </div>
-          {/* 4 Categories fore of Electronis */}
-          <div className="col-lg-6  ">
-            <div className="row g-3">
-              {/* =================================
-           SMALL CATEGORY 1 — BEAUTY
-      ================================== */}
-              <div className="col-12 col-lg-6">
-                <a href="#" className="category-card d-block">
-                  <img
-                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85"
-                    alt="Beauty"
-                  />
-                  <div className="category-content">
-                    <span>EXPLORE</span>
-                    <h3>Beauty</h3>
-                    <p>Personal Care</p>
-                    <i className="bi bi-arrow-up-right" />
-                  </div>
-                </a>
-              </div>
-              {/* =================================
-           SMALL CATEGORY 2 — GROCERIES
-      ================================== */}
-              <div className="col-12 col-lg-6">
-                <a href="#" className="category-card d-block">
-                  <img
-                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=85"
-                    alt="Groceries"
-                  />
-                  <div className="category-content">
-                    <span>EXPLORE</span>
-                    <h3>Groceries</h3>
-                    <p>Fresh Essentials</p>
-                    <i className="bi bi-arrow-up-right" />
-                  </div>
-                </a>
-              </div>
-              {/* =================================
-           SMALL CATEGORY 7 — HEALTH
-      ================================== */}
-              <div className="col-12 col-lg-6">
-                <a href="#" className="category-card d-block">
-                  <img
-                    src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=85"
-                    alt="Health and Wellness"
-                  />
-                  <div className="category-content">
-                    <span>EXPLORE</span>
-                    <h3>Health</h3>
-                    <p>Health &amp; Wellness</p>
-                    <i className="bi bi-arrow-up-right" />
-                  </div>
-                </a>
-              </div>
-              {/* =================================
-           SMALL CATEGORY 8 — BABY & KIDS
-      ================================== */}
-              <div className="col-12 col-lg-6">
-                <a href="#" className="category-card d-block">
-                  <img
-                    src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=85"
-                    alt="Baby and Kids"
-                  />
-                  <div className="category-content">
-                    <span>EXPLORE</span>
-                    <h3>Baby &amp; Kids</h3>
-                    <p>Everything for Kids</p>
-                    <i className="bi bi-arrow-up-right" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* =================================
-           LARGE CATEGORY 2 — HOME & LIVING
-      ================================== */}
+          
+
+
+          {/* House Equipments row */}
+      
           <h2>House Equipments</h2>
+           <div className="d-flex justify-content-between align-items-end mb-4 categories-header">
           <div className="col-lg-6">
             <a href="#" className="category-card category-large d-block">
               <img
@@ -274,7 +316,7 @@ function Home() {
             </div>
           </div>
         </div>
-        {/*Single Category Row*/}
+       {/* Gaming row */}
         <div className="row mt-3 text-center">
           <h3>Gaming World</h3>
           {/* =================================

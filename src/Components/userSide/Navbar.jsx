@@ -16,7 +16,7 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="mainNavbar">
         <ul className="navbar-nav  align-items-lg-center d-flex justify-content-evenly w-100">
           <li className="nav-item">
-            <Link to='/home' className='hovers'>Home</Link>
+            <Link to='/' className='hovers'>Home</Link>
           </li>
           <li className="nav-item">
             <a

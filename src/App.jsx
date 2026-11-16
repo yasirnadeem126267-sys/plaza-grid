@@ -37,7 +37,7 @@ let App=()=>{
 <Routes>
   <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
   <Route path='/adminLogin' element={<AdminLogin></AdminLogin>}></Route>
- <Route path='/home' element={<Home></Home>}></Route>
+ <Route path='/' element={<Home></Home>}></Route>
 
 <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
 <Route path='/signUp' element={<Signup></Signup>}></Route>
