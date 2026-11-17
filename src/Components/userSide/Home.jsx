@@ -6,104 +6,144 @@ import video2 from '../../assets/video2.mp4'
 import video3 from '../../assets/video3.mp4'
 import video4 from '../../assets/video4.mp4'
 import { useState } from 'react'
+import Cart from './Cart'
 function Home() {
   const data={
-    products:[
-      {
-        id:1,
-        name:"Laptop",
-        price: 50000,
-        img: "Laptop.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:8,
-      },
-       {
-        id:2,
-        name:"Bag",
-        price: 50000,
-        img: "bag.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:7,
-      },
-       {
-        id:3,
-        name:"Earbuds",
-        price: 50000,
-        img: "earbuds.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:12,
-      },
-       {
-        id:4,
-        name:"Mobile",
-        price: 50000,
-        img: "mobile.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:6,
-      },
-       {
-        id:5,
-        name:"Shirt",
-        price: 50000,
-        img: "shirt.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:10,
-      },
-       {
-        id:6,
-        name:"Shoes",
-        price: 50000,
-        img: "shoes.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:14,
-      },
-      {
-        id:6,
-        name:"Glasses",
-        price: 50000,
-        img: "glasses.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:4,
-      },
-      {
-        id:6,
-        name:"Charger",
-        price: 50000,
-        img: "charger.jpg",
-        rating:{
-          start: 4,
-          reviews: 50,
-        },
-        stock:10,
-      },
-    ]
-  }
+        products:[
+          {
+            id:1,
+            name:"Laptop",
+            price: 50000,
+            img: "Laptop.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:8,
+          },
+           {
+            id:2,
+            name:"Bag",
+            price: 50000,
+            img: "bag.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:7,
+          },
+           {
+            id:3,
+            name:"Earbuds",
+            price: 50000,
+            img: "earbuds.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:12,
+          },
+           {
+            id:4,
+            name:"Mobile",
+            price: 50000,
+            img: "mobile.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:6,
+          },
+           {
+            id:5,
+            name:"Shirt",
+            price: 50000,
+            img: "shirt.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:10,
+          },
+           {
+            id:6,
+            name:"Shoes",
+            price: 50000,
+            img: "shoes.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:14,
+          },
+          {
+            id:7,
+            name:"Glasses",
+            price: 50000,
+            img: "glasses.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:4,
+          },
+          {
+            id:8,
+            name:"Charger",
+            price: 50000,
+            img: "charger.jpg",
+            rating:{
+              start: 4,
+              reviews: 50,
+            },
+            stock:10,
+          },
+        ]
+      }
   const [value, setValue]=useState([]);
   let add=(s)=>{
-    setValue(s)
-    console.log(value);
+    const indexFind= value.findIndex((item)=> item.id===s.id);
+    if (indexFind !== -1){
+      qtyInc(indexFind);
+    }else{
+      setValue([...value,s])
+      setQty([...qty, 1])
+    }
+    
   }
+  // Increase and decrease states
+const [qty, setQty]= useState([]);
+
+  // Increase function
+
+const qtyInc=(t)=>{
+    const updatedQty=[...qty]
+    updatedQty[t]=(updatedQty[t] || 1) +1;
+    setQty(updatedQty)
+
+}
+
+
+
+  // Decrease function
+  const qtyDec=(d, id)=>{
+    const updateDec=[...qty]
+    
+       const currentQty = updateDec[d] || 1;
+    
+   
+   if (currentQty===1){
+   setValue( value.filter((item)=>item.id !== id)) ;
+   const fnalDec=[...qty]
+   fnalDec.splice(d,1);
+   setQty(fnalDec);
+   }else{
+    const fnalDec=[...qty]
+    fnalDec[d]=currentQty-1;
+    setQty(fnalDec)
+   }
+   
+}
   return (
     <>
      <section className="hero-section container">
@@ -195,35 +235,9 @@ function Home() {
          <div className=" row">
           
          {/* Card */}
-         {
-            data.products.map((item, index)=>(
-              <div className="col-xxl-3 col-lg-3 col-md-6 col-sm-12 mb-3"  key={index}>
-                     <div className="card"  >
-  <img src={item.img} className="card-img-top" alt="..." style={{height:"170px"}}/>
-  <div className="card-body">
-    <h5 className="card-title">{item.name}</h5>
-    <p className="card-text">Rs:{item.price}</p>
-     <p className="card-text">Stock: <span style={{color:"green"}}>{item.stock}</span></p>
-    <p className='card-text'>Star:{item.rating.start} Reviews: {item.rating.reviews}</p>
-    
-    <a href="#" className="btn btn-primary" onClick={()=> add(item)}>
-      Add to card
-    </a>
-  </div>
-</div>
- </div>
-// card end
-            ))
-         }
+        <Cart add={add} data={data} table={value} decrease={qtyDec} increase={qtyInc} quantity={qty}></Cart>
         
-
-         
-         
-
-         
           </div>
-          
-
 
           {/* House Equipments row */}
       
