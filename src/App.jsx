@@ -10,6 +10,7 @@ import AdminLogin from './Components/Admin Side/AdminLogin'
 import Dashboard from './Components/Admin Side/Dashboard'
 import Signup from './Components/Authentication/Signup'
 import Myprofile from './Components/userSide/Myprofile'
+import FAQ from './Components/userSide/FAQ/Faq'
 let App=()=>{
 
   return(
@@ -43,6 +44,7 @@ let App=()=>{
 <Route path='/signUp' element={<Signup></Signup>}></Route>
 <Route path='/signIn' element={<SignIn></SignIn>}></Route>
 <Route path='/userProfile' element={<Myprofile></Myprofile>}></Route>
+<Route path='/faq' element={<FAQ></FAQ>}> </Route>
  </Routes>
 <Footer></Footer>
 </BrowserRouter>

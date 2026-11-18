@@ -35,9 +35,7 @@ function Navbar() {
            <Link to="/contact" className='hovers'>Contact Us</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link  hovers" href="../FAQ/faq.html">
-              FAQ
-            </a>
+           <Link to='/faq' className='hovers'>FAQ</Link>
           </li>
           {/*More*/}
           <li className="nav-item dropdown">
