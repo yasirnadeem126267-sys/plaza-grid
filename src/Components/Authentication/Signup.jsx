@@ -1,5 +1,5 @@
 import React from 'react'
-import './Signup.css'
+import style from './Signup.module.css'
 function Signup() {
   return (
     <>
@@ -13,14 +13,14 @@ function Signup() {
     rel="stylesheet"
   />
   <link rel="stylesheet" href="../CSS/sign-up.css" />
-  <section className="signup-section">
+  <section className={`${style['signup-section']}`}>
     <div className="container">
-      <div className="signup-wrapper">
+      <div className={`${style['signup-wrapper']}`}>
         {/* Left Side: Welcome Section */}
-        <div className="signup-welcome">
-          <p className="plazaHeading"> plazaGrid</p>
-          <div className="welcome-content">
-            <span className="welcome-badge">JOIN OUR COMMUNITY</span>
+        <div className={`${style['signup-welcome']}`}>
+          <p className={`${style.plazaHeading}`}> plazaGrid</p>
+          <div className={`${style['welcome-content']}`}>
+            <span className={`${style['welcome-badge']}`}>JOIN OUR COMMUNITY</span>
             <h1>
               Start Your Shopping
               <span>Journey Today.</span>
@@ -29,23 +29,23 @@ function Signup() {
               Create your free account and enjoy a simple, convenient and secure
               shopping experience with plazaGrid.
             </p>
-            <div className="welcome-features">
-              <div className="welcome-feature">
-                <span className="feature-icon"></span>
+            <div className={`${style['welcome-features']}`}>
+              <div className={`${style['welcome-feature']}`}>
+                <span className={`${style['feature-icon']}`}></span>
                 <div>
                   <h6>Easy Shopping</h6>
                   <p>Explore products with ease.</p>
                 </div>
               </div>
-              <div className="welcome-feature">
-                <span className="feature-icon"></span>
+              <div className={`${style['welcome-feature']}`}>
+                <span className={`${style['feature-icon']}`}></span>
                 <div>
                   <h6>Order Tracking</h6>
                   <p>Stay updated on your orders.</p>
                 </div>
               </div>
-              <div className="welcome-feature">
-                <span className="feature-icon"></span>
+              <div className={`${style['welcome-feature']}`}>
+                <span className={`${style['feature-icon']}`}></span>
                 <div>
                   <h6>Secure Experience</h6>
                   <p>Shop with confidence.</p>
@@ -53,22 +53,22 @@ function Signup() {
               </div>
             </div>
           </div>
-          <div className="welcome-bottom">
+          <div className={`${style['welcome-bottom']}`}>
             Your shopping experience matters to us.
           </div>
         </div>
         {/* Right Side: Registration Form */}
-        <div className="signup-form-area">
-          <div className="signup-form-header">
-            <span className="form-top-label">CREATE ACCOUNT</span>
+        <div className={`${style['signup-form-area']}`}>
+          <div className={`${style['signup-form-header']}`}>
+            <span className={`${style['form-top-label']}`}>CREATE ACCOUNT</span>
             <h2>Create Your Account</h2>
             <p>Please enter your details to get started.</p>
           </div>
           <form id="signupForm">
             {/* Full Name */}
-            <div className="form-group-custom">
+            <div className={`${style['form-group-custom']}`}>
               <label htmlFor="fullName">Full Name</label>
-              <div className="input-wrapper">
+              <div className={`${style['input-wrapper']}`}>
                 <input
                   type="text"
                   id="fullName"
@@ -79,46 +79,46 @@ function Signup() {
               </div>
             </div>
             {/* Email */}
-            <div className="form-group-custom">
+            <div className={`${style['form-group-custom']}`}>
               <label htmlFor="email">Email Address</label>
-              <div className="input-wrapper">
+              <div className={`${style['input-wrapper']}`}>
                 <input
                   type="email"
                   id="email"
-                  className="form-control"
+                  className={`${style['form-control']}`}
                   placeholder="Enter your email address"
                   required=""
                 />
               </div>
             </div>
             {/* Phone */}
-            <div className="form-group-custom">
+            <div className={`${style['form-group-custom']}`}>
               <label htmlFor="phone">Phone Number</label>
-              <div className="input-wrapper">
+              <div className={`${style['input-wrapper']}`}>
                 <input
                   type="tel"
                   id="phone"
-                  className="form-control"
+                  className={`${style['form-control']}`}
                   placeholder="Enter your phone number"
                   required=""
                 />
               </div>
             </div>
             {/* Password */}
-            <div className="form-group-custom">
+            <div className={`${style['form-group-custom']}`}>
               <label htmlFor="password">Password</label>
-              <div className="input-wrapper">
+              <div className={`${style['input-wrapper']}`}>
                 <input
                   type="password"
                   id="password"
-                  className="form-control"
+                  className={`${style['form-control']}`}
                   placeholder="Create a password"
                   minLength={8}
                   required=""
                 />
                 <button
                   type="button"
-                  className="password-toggle"
+                  className={`${style['password-toggle']}`}
                   onclick="togglePassword('password', this)"
                   aria-label="Show password"
                 >
@@ -127,20 +127,20 @@ function Signup() {
               </div>
             </div>
             {/* Confirm Password */}
-            <div className="form-group-custom">
+            <div className={`${style['form-group-custom']}`}>
               <label htmlFor="confirmPassword">Confirm Password</label>
-              <div className="input-wrapper">
+              <div className={`${style['input-wrapper']}`}>
                 <input
                   type="password"
                   id="confirmPassword"
-                  className="form-control"
+                  className={`${style['form-control']}`}
                   placeholder="Confirm your password"
                   minLength={8}
                   required=""
                 />
                 <button
                   type="button"
-                  className="password-toggle"
+                  className={`${style['password-toggle']}`}
                   onclick="togglePassword('confirmPassword', this)"
                   aria-label="Show confirm password"
                 >
@@ -149,7 +149,7 @@ function Signup() {
               </div>
             </div>
             {/* Terms */}
-            <div className="signup-terms">
+            <div className={`${style['signup-terms']}`}>
               <input type="checkbox" id="terms" required="" />
               <label htmlFor="terms">
                 I agree to the
@@ -161,11 +161,11 @@ function Signup() {
             {/* Message */}
             <div id="signupMessage" />
             {/* Submit Button */}
-            <button type="submit" className="signup-submit-btn">
+            <button type="submit" className={`${style['signup-submit-btn']}`}>
               Create Account
             </button>
             {/* Sign-In Link */}
-            <div className="signup-login">
+            <div className={`${style['signup-login']}`}>
               Already have an account?
               <a href="signi-in.html">Sign In</a>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css'
+import style from './Navbar.module.css'
 function Navbar() {
   return (
     <>
@@ -16,31 +16,31 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="mainNavbar">
         <ul className="navbar-nav  align-items-lg-center d-flex justify-content-evenly w-100">
           <li className="nav-item">
-            <Link to='/' className='hovers'>Home</Link>
+            <Link to='/' className={`${style.hovers} `}>Home</Link>
           </li>
           <li className="nav-item">
             <a
-              className="nav-link  hovers"
+              className={`  ${style.hovers}`}
               href="../Shop-Product-page/Shop-Product.html"
             >
               Products
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link  hovers" href="../About Us/about.html">
+            <a className={` ${style.hovers}`} href="../About Us/about.html">
               About Us
             </a>
           </li>
           <li className="nav-item">
-           <Link to="/contact" className='hovers'>Contact Us</Link>
+           <Link to="/contact" className={`${style.hovers}`}>Contact Us</Link>
           </li>
           <li className="nav-item">
-           <Link to='/faq' className='hovers'>FAQ</Link>
+           <Link to='/faq' className={`${style.hovers} `}>FAQ</Link>
           </li>
           {/*More*/}
           <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle hovers"
+              className={` dropdown-toggle ${style.hovers}`}
               href="#"
               role="button"
               data-bs-toggle="dropdown"

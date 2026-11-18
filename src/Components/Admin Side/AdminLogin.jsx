@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './AdminLogin.css'
+import style from './AdminLogin.module.css'
 import { useNavigate } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
@@ -32,7 +32,7 @@ function AdminLogin() {
   <div className="container mt-4 main">
     <div className="row">
       {/* { Left-Side } */}
-      <div className="col-lg-6 left-side">
+      <div className={`col-lg-6 ${style['left-side']}`}>
         <h4 className="mb-5 p-5" style={{ fontSize: 28 }}>
           {" "}
           <span style={{ color: "white" }}>Plaza</span>{" "}
@@ -41,18 +41,18 @@ function AdminLogin() {
         {/*Center-text  */}
         <div className="mt-5 p-5">
           <h2 style={{ color: "white" }}>Admin Panel</h2>
-          <p style={{ color: "white" }} className="font">
+          <p style={{ color: "white" }} className={`${style.font}`}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero et,
             aliquid hic veniam aspernatur sed aliquam ipsa beatae autem
             reiciendis necessitatibus!
           </p>
         </div>
-        <p style={{ color: "white" }} className=" mt-5 ps-5 pb-5 font">
+        <p style={{ color: "white" }} className={` mt-5 ps-5 pb-5 ${style.font}`}>
           All rights are reserved by plazaGrid
         </p>
       </div>
       {/* Right side */}
-      <div className="col-lg-6 form-parent mt-lg-0 mt-sm-3">
+      <div className={`col-lg-6 ${style['form-parent']} mt-lg-0 mt-sm-3`}>
         <form action="" className="p-4 border rounded " onSubmit={handel}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <h4>Admin Login</h4>
@@ -84,7 +84,7 @@ function AdminLogin() {
           {/* Remember and Forgot */}
           <div style={{ display: "flex" }}>
             <p className="m-auto">Remember me</p>
-            <p className="forgot-password m-auto">Forgot Password?</p>
+            <p className={`${style['forgot-password']} m-auto`}>Forgot Password?</p>
           </div>
           {/* submit button and back*/}
          <div>

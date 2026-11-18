@@ -1,21 +1,21 @@
 import React from 'react'
-import './Footer.css'
+import style from './Footer.module.css'
 function Footer() {
   return (
     <>
-     <footer className="main-footer">
+     <footer className={`${style['main-footer']}`}>
     <div className="container">
-      <div className="row g-4 footer-main">
+      <div className={`row g-4 ${style['footer-main']}`}>
         <div className="col-lg-4 col-md-6">
-          <p href="#" className="footer-logo">
+          <p href="#" className={`${style['footer-logo']}`}>
             <i className="bi bi-bag-check-fill" />
             MyShop<span>.</span>
           </p>
-          <p className="footer-description">
+          <p className={`${style['footer-description']}`}>
             Your trusted online marketplace for quality products, reliable
             sellers, and a better shopping experience.
           </p>
-          <div className="footer-socials">
+          <div className={`${style['footer-socials']}`}>
             <a href="#" aria-label="Facebook">
               <i className="bi bi-facebook" />
             </a>
@@ -31,8 +31,8 @@ function Footer() {
           </div>
         </div>
         <div className="col-lg-2 col-md-6 col-6">
-          <h5 className="footer-heading">Quick Links</h5>
-          <ul className="footer-links">
+          <h5 className={`${style['footer-heading']}`}>Quick Links</h5>
+          <ul className={`${style['footer-links']}`}>
             <li>
               <a href="#">Home</a>
             </li>
@@ -51,8 +51,8 @@ function Footer() {
           </ul>
         </div>
         <div className="col-lg-2 col-md-6 col-6">
-          <h5 className="footer-heading">Customer Service</h5>
-          <ul className="footer-links">
+          <h5 className={`${style['footer-heading']}`}>Customer Service</h5>
+          <ul className={`${style['footer-links']}`}>
             <li>
               <a href="#">My Account</a>
             </li>
@@ -71,8 +71,8 @@ function Footer() {
           </ul>
         </div>
         <div className="col-lg-2 col-md-6 col-6">
-          <h5 className="footer-heading">For Sellers</h5>
-          <ul className="footer-links">
+          <h5 className={`${style['footer-heading']}`}>For Sellers</h5>
+          <ul className={`${style['footer-links']}`}>
             <li>
               <a href="#">Become a Seller</a>
             </li>
@@ -91,8 +91,8 @@ function Footer() {
           </ul>
         </div>
         <div className="col-lg-2 col-md-6 col-6">
-          <h5 className="footer-heading">Contact Us</h5>
-          <ul className="footer-links footer-contact">
+          <h5 className={`${style['footer-heading']}`}>Contact Us</h5>
+          <ul className={`${style['footer-links']} ${style['footer-contact']}`}>
             <li>
               <i className="bi bi-envelope" />
               <a href="">Email Support</a>
@@ -108,9 +108,9 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className={`${style['footer-bottom']}`}>
         <p>© 2026 plazaGrid. All rights reserved.</p>
-        <div className="footer-bottom-links">
+        <div className={`${style['footer-bottom-links']}`}>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms &amp; Conditions</a>
           <a href="#">Cookie Policy</a>

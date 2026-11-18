@@ -1,5 +1,5 @@
 import React from 'react'
-import './ContactUs.css'
+import style from './ContactUs.module.css'
 function ContactUs() {
   return (
    <>
@@ -17,7 +17,7 @@ function ContactUs() {
   
   {/* Main Content */}
   <main className="container py-5">
-    <div className="page-heading text-center mb-5">
+    <div className={`${style['page-heading']} text-center mb-5`}>
       <h2>Contact Us</h2>
       <p className="text-muted">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. possimus nihil
@@ -27,32 +27,32 @@ function ContactUs() {
     <div className="row g-4">
       {/* Contact Information */}
       <div className="col-lg-4">
-        <div className="contact-info-card">
+        <div className={`${style['contact-info-card']}`}>
           <h4>Multiple options</h4>
           <p className="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
             soluta expedita perspiciatis reprehenderit.
           </p>
-          <div className="contact-item">
+          <div className={`${style['contact-item']}`}>
             <div>
               <h6>Email</h6>
               <p>plazaGrid@gmail.com</p>
             </div>
           </div>
-          <div className="contact-item">
+          <div className={`${style['contact-item']}`}>
             <div>
               <h6>Phone</h6>
               <p>+92 300 1234567</p>
             </div>
           </div>
-          <div className="contact-item">
-            <div className="contact-icon"></div>
+          <div className={`${style['contact-item']}`}>
+            <div className={`${style['contact-icon']}`}></div>
             <div>
               <h6>Address</h6>
               <p>Pakistan</p>
             </div>
           </div>
-          <div className="contact-item">
+          <div className={`${style['contact-item']}`}>
             <div>
               <h6>Working Hours</h6>
               <p>Monday - Saturday</p>
@@ -63,7 +63,7 @@ function ContactUs() {
       </div>
       {/* Contact Form */}
       <div className="col-lg-8">
-        <div className="contact-form-card">
+        <div className={`${style['contact-form-card']}`}>
           <h4>Send Us a Message</h4>
           <p className="text-muted">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -71,7 +71,7 @@ function ContactUs() {
           <form id="contactForm">
             <div className="row g-3">
               <div className="col-md-6">
-                <label htmlFor="contactName" className="form-label">
+                <label htmlFor="contactName" className={`${style['form-label']} form-label`}>
                   Full Name
                 </label>
                 <input
@@ -84,7 +84,7 @@ function ContactUs() {
                 />
               </div>
               <div className="col-md-6">
-                <label htmlFor="contactEmail" className="form-label">
+                <label htmlFor="contactEmail" className={`${style['form-label']} form-label`}>
                   Email Address
                 </label>
                 <input
@@ -96,7 +96,7 @@ function ContactUs() {
                 />
               </div>
               <div className="col-md-6">
-                <label className="form-label">Phone Number</label>
+                <label className={`${style['form-label']} form-label`}>Phone Number</label>
                 <input
                   type=""
                   className="form-control"
@@ -106,7 +106,7 @@ function ContactUs() {
                 />
               </div>
               <div className="col-md-6">
-                <label className="form-label">Subject</label>
+                <label className={`${style['form-label']}`}>Subject</label>
                 <input
                   className="form-control"
                   id="contactPhone"
@@ -115,7 +115,7 @@ function ContactUs() {
                 />
               </div>
               <div className="col-12">
-                <label className="form-label">Your Message</label>
+                <label className={`${style['form-label']}`}>Your Message</label>
                 <textarea
                   className="form-control"
                   id="contactMessage"
@@ -126,7 +126,7 @@ function ContactUs() {
                 />
               </div>
               <div className="col-12">
-                <button className="btn btn-orange px-4 py-2">
+                <button className={`btn ${style['btn-orange']} px-4 py-2`}>
                   Send Message
                 </button>
               </div>

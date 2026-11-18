@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './userSignIn.css'
+import style from './userSignIn.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 function SignIn() {
   let [email, setEmail]=useState("User@gmial.com");
@@ -31,16 +31,16 @@ function SignIn() {
   />
   {/* Custom CSS */}
   <link rel="stylesheet" href="../CSS/sign-in.css" />
-  <section className="login-section">
+  <section className={`${style['login-section']}`}>
     <div className="container">
-      <div className="login-wrapper">
+      <div className={`${style['login-wrapper']}`}>
         {/* Left Side: Welcome Section */}
-        <div className="login-welcome">
-          <a href="../index.html" className="login-logo">
+        <div className={`${style['login-welcome']}`}>
+          <a href="../index.html" className={`${style['login-logo']}`}>
             plazaGrid<span>.</span>
           </a>
-          <div className="login-welcome-content">
-            <span className="login-welcome-badge">WELCOME BACK</span>
+          <div className={`${style['login-welcome-content']}`}>
+            <span className={`${style['login-welcome-badge']}`}>WELCOME BACK</span>
             <h1>
               Good to See
               <span>You Again.</span>
@@ -49,23 +49,23 @@ function SignIn() {
               Log in to your MyShop account and continue enjoying a simple,
               convenient and secure shopping experience.
             </p>
-            <div className="login-welcome-features">
-              <div className="login-welcome-feature">
-                <span className="login-feature-icon"></span>
+            <div className={`${style['login-welcome-features']}`}>
+              <div className={`${style['login-welcome-feature']}`}>
+                <span className={`${style['login-feature-icon']}`}></span>
                 <div>
                   <h6>Easy Shopping</h6>
                   <p>Discover products you love.</p>
                 </div>
               </div>
-              <div className="login-welcome-feature">
-                <span className="login-feature-icon"></span>
+              <div className={`${style['login-welcome-feature']}`}>
+                <span className={`${style['login-feature-icon']}`}></span>
                 <div>
                   <h6>Track Your Orders</h6>
                   <p>Keep an eye on your deliveries.</p>
                 </div>
               </div>
-              <div className="login-welcome-feature">
-                <span className="login-feature-icon"></span>
+              <div className={`${style['login-welcome-feature']}`}>
+                <span className={`${style['login-feature-icon']}`}></span>
                 <div>
                   <h6>Secure Account</h6>
                   <p>Your shopping journey matters.</p>
@@ -73,29 +73,29 @@ function SignIn() {
               </div>
             </div>
           </div>
-          <div className="login-welcome-bottom">
+          <div className={`${style['login-welcome-bottom']}`}>
             Thank you for shopping with MyShop.
           </div>
           {/* Decorative Shapes */}
-          <div className="login-circle login-circle-one" />
-          <div className="login-circle login-circle-two" />
+          <div className={`${style['login-circle']} ${style['login-circle-one']}`} />
+          <div className={`${style['login-circle']} ${style['login-circle-two']}`} />
         </div>
         {/* Right Side: Login Form */}
-        <div className="login-form-area">
-          <div className="login-form-header">
-            <span className="login-form-top-label">ACCOUNT LOGIN</span>
+        <div className={`${style['login-form-area']}`}>
+          <div className={`${style['login-form-header']}`}>
+            <span className={`${style['login-form-top-label']}`}>ACCOUNT LOGIN</span>
             <h2>Welcome Back!</h2>
             <p>Enter your account details to continue.</p>
           </div>
           <form id="loginForm" onSubmit={check}>
             {/* Email */}
-            <div className="login-form-group">
+            <div className={`${style['login-form-group']}`}>
               <label htmlFor="loginEmail">Email Address</label>
-              <div className="login-input-wrapper">
+              <div className={`${style['login-input-wrapper']}`}>
                 <input
                   type="email"
                   id="loginEmail"
-                  className="form-control"
+                  className={`${style['form-control']}form-control`}
                   placeholder="Enter your email address"
                   required=""
                   onChange={(e)=>setEmail(e.target.value)}
@@ -103,20 +103,20 @@ function SignIn() {
               </div>
             </div>
             {/* Password */}
-            <div className="login-form-group">
+            <div className={`${style['login-form-group']}`}>
               <label htmlFor="loginPassword">Password</label>
-              <div className="login-input-wrapper">
+              <div className={`${style['login-input-wrapper']}`}>
                 <input
                   type="password"
                   id="loginPassword"
-                  className="form-control"
+                  className={`${style['form-control']} form-control`}
                   placeholder="Enter your password"
                   required
                   onChange={(e)=>setPassword(e.target.value)}
                 />
                 <button
                   type="button"
-                  className="login-password-toggle"
+                  className={`${style['login-password-toggle']}`}
                  
                   aria-label="Show password"
                 >
@@ -125,30 +125,30 @@ function SignIn() {
               </div>
             </div>
             {/* Remember Me & Forgot Password */}
-            <div className="login-options">
-              <div className="remember-option">
+            <div className={`${style['login-options']}`}>
+              <div className={`${style['remember-option']}`}>
                 <input type="checkbox" id="rememberMe" />
                 <label htmlFor="rememberMe">Remember Me</label>
               </div>
-              <a href="forgot-password.html" className="forgot-password-link">
+              <a href="forgot-password.html" className={`${style['forgot-password-link']}`}>
                 Forgot Password?
               </a>
             </div>
             {/* Message */}
             <div id="loginMessage" />
             {/* Login Button */}
-            <button type="submit" className="login-submit-btn">
+            <button type="submit" className={`${style['login-submit-btn']}`}>
               Login to Account
               <i className="bi bi-arrow-right" />
             </button>
             {/* Register Link */}
-            <div className="login-register">
+            <div className={`${style['login-register']}`}>
               Don't have an account?
               <Link to="/signup">Create Account</Link>
             </div>
           </form>
           {/* Back to Home */}
-          <a href="../index.html" className="back-home-link">
+          <a href="../index.html" className={`${style['back-home-link']}`}>
             <i className="bi bi-arrow-left" />
             Back to Homepage
           </a>

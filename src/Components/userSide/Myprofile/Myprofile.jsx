@@ -1,5 +1,5 @@
 import React from 'react'
-import './Myprofile.css'
+import style from './Myprofile.module.css'
 function Myprofile() {
   return (
     <>
@@ -19,23 +19,23 @@ function Myprofile() {
   {/* Navbar */}
   <nav className="navbar navbar-expand-lg bg-white border-bottom">
     <div className="container">
-      <a className="navbar-brand fw-bold" href="../index.html">
+      <a className={`${style['navbar-brand']} navbar-brand fw-bold`} href="../index.html">
         plaza<span>Grid</span>
       </a>
-      <a href="products.html" className="btn btn-outline-orange btn-sm">
+      <a href="products.html" className={`btn ${style['btn-outline-orange']} btn-sm`}>
         Continue Shopping
       </a>
     </div>
   </nav>
   {/* Main Content */}
   <main className="container py-5">
-    <div className="page-heading mb-4">
+    <div className={`${style['page-heading']} mb-4`}>
       <h2>My Profile</h2>
       <p className="text-muted">Manage your personal information.</p>
     </div>
-    <div className="profile-card">
+    <div className={`${style['profile-card']}`}>
       {/* Profile Header */}
-      <div className="profile-header">
+      <div className={`${style['profile-header']}`}>
         <div>
           <h4 id="profileName">Customer Name</h4>
           <p className="text-muted mb-0">Customer Account</p>
@@ -46,35 +46,35 @@ function Myprofile() {
       <form id="profileForm">
         <div className="row g-3">
           <div className="col-md-6">
-            <label htmlFor="fullName" className="form-label">
+            <label htmlFor="fullName" className={`${style['form-label']} form-label`}>
               Full Name
             </label>
             <input
               type="text"
-              className="form-control"
+              className={`${style['form-control']} form-control`}
               id="fullName"
               required=""
               minLength={3}
             />
           </div>
           <div className="col-md-6">
-            <label htmlFor="email" className="form-label">
+            <label htmlFor="email" className={`${style['form-label']} form-label`}>
               Email Address
             </label>
             <input
               type="email"
-              className="form-control"
+              className={`${style['form-control']} form-control`}
               id="email"
               required=""
             />
           </div>
           <div className="col-md-6">
-            <label htmlFor="phone" className="form-label">
+            <label htmlFor="phone" className={`${style['form-label']} form-label`}>
               Phone Number
             </label>
             <input
               type="tel"
-              className="form-control"
+              className={`${style['form-control']} form-control`}
               id="phone"
               maxLength={11}
               pattern="03[0-9]{9}"
@@ -82,17 +82,17 @@ function Myprofile() {
             />
           </div>
           <div className="col-md-6">
-            <label htmlFor="city" className="form-label">
+            <label htmlFor="city" className={`${style['form-label']} form-label`}>
               City
             </label>
-            <input type="text" className="form-control" id="city" required="" />
+            <input type="text" className={`${style['form-control']} form-control`} id="city" required="" />
           </div>
           <div className="col-12">
-            <label htmlFor="address" className="form-label">
+            <label htmlFor="address" className={`${style['form-label']}form-label`}>
               Complete Address
             </label>
             <textarea
-              className="form-control"
+              className={`${style['form-control']} form-control`}
               id="address"
               rows={3}
               required=""
@@ -101,26 +101,26 @@ function Myprofile() {
           </div>
         </div>
         {/* Buttons */}
-        <div className="profile-actions mt-4">
-          <button type="button" id="editBtn" className="btn btn-outline-orange">
+        <div className={`${style['profile-actions']} mt-4`}>
+          <button type="button" id="editBtn" className={`btn ${style['btn-outline-orange']}`}>
             Edit Profile
           </button>
           <button
             type="submit"
             id="saveBtn"
-            className="btn btn-orange"
+            className={`btn ${style['btn-orange']}`}
             disabled=""
           >
             Save Changes
           </button>
         </div>
-        <p id="successMessage" className="success-message mt-3 d-none">
+        <p id="successMessage" className={`${style['success-message']} mt-3 d-none`}>
           Profile updated successfully!
         </p>
       </form>
     </div>
     {/* Quick Links */}
-    <div className="quick-links mt-4">
+    <div className={`${style['quick-links']} mt-4`}>
       <a href="my-orders.html">
         <span>My Orders</span>
       </a>

@@ -1,18 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './Components/userSide/Navbar'
-import Home from './Components/userSide/Home'
-import ContactUs from './Components/userSide/ContactUs'
+import Home from './Components/userSide/Home/Home'
+import ContactUs from './Components/userSide/Cantact/ContactUs'
 import Footer from './Components/userSide/Footer'
 import SignIn from './Components/Authentication/userSignIn'
 import TopSearch from './Components/userSide/TopSearch'
 import AdminLogin from './Components/Admin Side/AdminLogin'
-import Dashboard from './Components/Admin Side/Dashboard'
+import Dashboard from './Components/Admin Side/Dashboard/Dashboard'
 import Signup from './Components/Authentication/Signup'
-import Myprofile from './Components/userSide/Myprofile'
+import Myprofile from './Components/userSide/Myprofile/Myprofile'
 import FAQ from './Components/userSide/FAQ/Faq'
 let App=()=>{
-
   return(
     <>
   <meta charSet="UTF-8" />
