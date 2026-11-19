@@ -4,7 +4,7 @@ function FAQ() {
   return (
     <>
      {/* Main div */}
-        <div>
+        <div className='mt-3'>
              <h6 style={{color:"#ff6b35"}}> How can we help?</h6>
              <h2>Find Your Answers</h2>
              <p style={{color:"#666666"}}>Choose a question below to see its answer.</p>
@@ -43,7 +43,7 @@ function FAQ() {
 
 
               {/*=== Accordiona div Two ===*/}
-             <div className="accordion" id='main-accordion2 mt-3'>
+             <div className="accordion  mt-3" id='main-accordion2 '>
               <h3>Payments</h3>
                 {/* Accordion item 1 */}
                 <div className="accordion-item">
@@ -74,14 +74,75 @@ function FAQ() {
                 </div>
              </div>
 
+         {/*=== Accordiona div Three ===*/}
+         <div className="accordion mt-3" id='main-accordion3'>
+          <h3>Shipping & Delivery</h3>
+          {/*=== Accordion item 1 ===*/}
+          <div className="accordion-item">
+          
+          <h4 className="accordion-header ">
+            <button className="accordion-button" data-bs-toggle="collapse" data-bs-target="#question31">How can I track my order?</button>
+          </h4>
+             {/* body of item 1 */}
+          <div className="accordion-collapse collapse" id='question31' data-bs-parent="#main-accordion3">
+            <p className="accordion-body" >
+               Visit the My Orders page to check the current order status. Courier tracking can be added when a delivery service is integrated.
+            </p>
+          </div>
 
+           {/*=== Accordion item 2 ===*/}
+           <div className="accordion-item">
+            <h4 className="accordion-header">
+              <button className="accordion-button" data-bs-toggle="collapse" data-bs-target="#question32">
+                How long does delivery take?
+              </button>
+            </h4>
+            {/* body of item 2 */}
+            <div className="accordion-collapse collapse" data-bs-parent="#main-accordion3" id='question32'>
+              <p className='accordion-body' >
+                Delivery time depends on the customer's location and the store's shipping arrangements. Please contact support for an estimated delivery time.
+              </p>
+            </div>
+           </div>
 
+          </div>
+        
+         </div>
 
+         {/*=== Accordiona div Four ===*/}
+         <div className="accordion mt-3" id='main-accordion4'>
+          <h3>Returns & Cancellations</h3>
+          {/*=== Accordion item 1 ===*/}
+          <div className="accordion-item">          
+          <h4 className="accordion-header ">
+            <button className="accordion-button" data-bs-toggle="collapse" data-bs-target="#question41">Can I cancle my order?</button>
+          </h4>
+             {/* body of item 1 */}
+          <div className="accordion-collapse collapse" id='question41' data-bs-parent="#main-accordion4">
+            <p className="accordion-body" >
+               Order cancellation depends on the order status and store policy. Contact customer support as soon as possible to request cancellation.
+            </p>
+          </div>
 
-
+           {/*=== Accordion item 2 ===*/}
+           <div className="accordion-item">
+            <h4 className="accordion-header">
+              <button className="accordion-button" data-bs-toggle="collapse" data-bs-target="#question42">
+                What if I receive a damaged product?
+              </button>
+            </h4>
+            {/* body of item 2 */}
+            <div className="accordion-collapse collapse" data-bs-parent="#main-accordion4" id='question42'>
+              <p className='accordion-body' >
+                Contact our support team with your order details and clear pictures of the damaged product. The request will be handled according to the store's return policy.
+              </p>
+            </div>
+           </div>
+          </div>
+        
+         </div>
         </div>
     </>
   )
 }
-
 export default FAQ;
