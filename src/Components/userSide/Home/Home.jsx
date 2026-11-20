@@ -1,149 +1,162 @@
 
-import style from './Home.module.css'
-import hero from '../../../assets/Hero-Image.avif'
-import video1 from '../../../assets/video1.mp4'
-import video2 from '../../../assets/video2.mp4'
-import video3 from '../../../assets/video3.mp4'
-import video4 from '../../../assets/video4.mp4'
-import { useState } from 'react'
-import Cart from '../Cart/Cart'
+import style from './Home.module.css';
+import hero from '../../../assets/Hero-Image.avif';
+import video1 from '../../../assets/video1.mp4';
+import video2 from '../../../assets/video2.mp4';
+import video3 from '../../../assets/video3.mp4';
+import video4 from '../../../assets/video4.mp4';
+import { useState, useContext, useEffect } from 'react';
+import Cart from '../Cart/Cart';
+import CartTable from '../Cart/CartTable';
+import { DataContext } from '../DataContext';
+
 function Home() {
-  const data={
-        products:[
-          {
-            id:1,
-            name:"Laptop",
-            price: 50000,
-            img: "Laptop.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:8,
-          },
-           {
-            id:2,
-            name:"Bag",
-            price: 50000,
-            img: "bag.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:7,
-          },
-           {
-            id:3,
-            name:"Earbuds",
-            price: 50000,
-            img: "earbuds.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:12,
-          },
-           {
-            id:4,
-            name:"Mobile",
-            price: 50000,
-            img: "mobile.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:6,
-          },
-           {
-            id:5,
-            name:"Shirt",
-            price: 50000,
-            img: "shirt.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:10,
-          },
-           {
-            id:6,
-            name:"Shoes",
-            price: 50000,
-            img: "shoes.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:14,
-          },
-          {
-            id:7,
-            name:"Glasses",
-            price: 50000,
-            img: "glasses.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:4,
-          },
-          {
-            id:8,
-            name:"Charger",
-            price: 50000,
-            img: "charger.jpg",
-            rating:{
-              start: 4,
-              reviews: 50,
-            },
-            stock:10,
-          },
-        ]
-      }
-  const [value, setValue]=useState([]);
-  let add=(s)=>{
-    const indexFind= value.findIndex((item)=> item.id===s.id);
-    if (indexFind !== -1){
-      qtyInc(indexFind);
-    }else{
-      setValue([...value,s])
-      setQty([...qty, 1])
-    }
-    
-  }
-  // Increase and decrease states
-const [qty, setQty]= useState([]);
+  const data = {
+    products: [
+      {
+        id: 1,
+        name: "Laptop",
+        price: 50000,
+        img: "Laptop.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 8,
+      },
+      {
+        id: 2,
+        name: "Bag",
+        price: 50000,
+        img: "bag.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 7,
+      },
+      {
+        id: 3,
+        name: "Earbuds",
+        price: 50000,
+        img: "earbuds.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 12,
+      },
+      {
+        id: 4,
+        name: "Mobile",
+        price: 50000,
+        img: "mobile.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 6,
+      },
+      {
+        id: 5,
+        name: "Shirt",
+        price: 50000,
+        img: "shirt.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 10,
+      },
+      {
+        id: 6,
+        name: "Shoes",
+        price: 50000,
+        img: "shoes.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 14,
+      },
+      {
+        id: 7,
+        name: "Glasses",
+        price: 50000,
+        img: "glasses.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 4,
+      },
+      {
+        id: 8,
+        name: "Charger",
+        price: 50000,
+        img: "charger.jpg",
+        rating: {
+          start: 4,
+          reviews: 50,
+        },
+        stock: 10,
+      },
+    ],
+  };
+
+  const [value, setValue] = useState([]);
+  const [qty, setQty] = useState([]);
 
   // Increase function
-
-const qtyInc=(t)=>{
-    const updatedQty=[...qty]
-    updatedQty[t]=(updatedQty[t] || 1) +1;
-    setQty(updatedQty)
-
-}
-
-
+  const qtyInc = (t) => {
+    setQty((prevQty) => {
+      const updatedQty = [...prevQty];
+      updatedQty[t] = (updatedQty[t] || 1) + 1;
+      return updatedQty;
+    });
+  };
 
   // Decrease function
-  const qtyDec=(d, id)=>{
-    const updateDec=[...qty]
-    
-       const currentQty = updateDec[d] || 1;
-    
-   
-   if (currentQty===1){
-   setValue( value.filter((item)=>item.id !== id)) ;
-   const fnalDec=[...qty]
-   fnalDec.splice(d,1);
-   setQty(fnalDec);
-   }else{
-    const fnalDec=[...qty]
-    fnalDec[d]=currentQty-1;
-    setQty(fnalDec)
-   }
-   
-}
+  const qtyDec = (d, id) => {
+    setQty((prevQty) => {
+      const currentQty = prevQty[d] || 1;
+
+      if (currentQty === 1) {
+        setValue((prevVal) => prevVal.filter((item) => item.id !== id));
+        const fnalDec = [...prevQty];
+        fnalDec.splice(d, 1);
+        return fnalDec;
+      } else {
+        const fnalDec = [...prevQty];
+        fnalDec[d] = currentQty - 1;
+        return fnalDec;
+      }
+    });
+  };
+
+  // Add function
+  const add = (s) => {
+    const indexFind = value.findIndex((item) => item.id === s.id);
+    if (indexFind !== -1) {
+      qtyInc(indexFind);
+    } else {
+      setValue([...value, s]);
+      setQty([...qty, 1]);
+    }
+  };
+
+  const { setSharedData } = useContext(DataContext);
+
+  useEffect(() => {
+    setSharedData({
+      cartItems: value,
+      quantities: qty,
+      increaseQty: qtyInc,
+      decreaseQty: qtyDec,
+    });
+  }, [value, qty]);
+
+
   return (
     <>
      <section className={`${style['hero-section']} container`}>
@@ -235,7 +248,7 @@ const qtyInc=(t)=>{
          <div className=" row">
           
          {/* Card */}
-        <Cart add={add} data={data} table={value} decrease={qtyDec} increase={qtyInc} quantity={qty}></Cart>
+        <Cart add={add} data={data} decrease={qtyDec} increase={qtyInc} quantity={qty} ></Cart>
         
           </div>
 

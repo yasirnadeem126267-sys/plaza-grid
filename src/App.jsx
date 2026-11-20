@@ -11,46 +11,43 @@ import Dashboard from './Components/Admin Side/Dashboard/Dashboard'
 import Signup from './Components/Authentication/Signup'
 import Myprofile from './Components/userSide/Myprofile/Myprofile'
 import FAQ from './Components/userSide/FAQ/Faq'
-let App=()=>{
-  return(
+import { DataProvider } from './Components/userSide/DataContext' 
+
+let App = () => {
+  return (
     <>
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-  
-  
-{/*Navbar end*/}
-  {/*2nd Nav bar */}
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      />
 
-<BrowserRouter>
-
-<TopSearch></TopSearch>
-<Navbar></Navbar>
-<Routes>
-  <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
-  <Route path='/adminLogin' element={<AdminLogin></AdminLogin>}></Route>
- <Route path='/' element={<Home></Home>}></Route>
-
-<Route path='/contact' element={<ContactUs></ContactUs>}></Route>
-<Route path='/signUp' element={<Signup></Signup>}></Route>
-<Route path='/signIn' element={<SignIn></SignIn>}></Route>
-<Route path='/userProfile' element={<Myprofile></Myprofile>}></Route>
-<Route path='/faq' element={<FAQ></FAQ>}> </Route>
- </Routes>
-<Footer></Footer>
-</BrowserRouter>
-  
- 
- </>
-
+     
+      <DataProvider>
+        <BrowserRouter>
+          <TopSearch></TopSearch>
+          <Navbar></Navbar>
+          <Routes>
+            <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+            <Route path='/adminLogin' element={<AdminLogin></AdminLogin>}></Route>
+            <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
+            <Route path='/signUp' element={<Signup></Signup>}></Route>
+            <Route path='/signIn' element={<SignIn></SignIn>}></Route>
+            <Route path='/userProfile' element={<Myprofile></Myprofile>}></Route>
+            <Route path='/faq' element={<FAQ></FAQ>}></Route>
+          </Routes>
+          <Footer></Footer>
+        </BrowserRouter>
+      </DataProvider>
+    </>
   )
 }
+
 export default App;
