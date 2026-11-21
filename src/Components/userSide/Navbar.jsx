@@ -27,9 +27,9 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a className={` ${style.hovers}`} href="../About Us/about.html">
+            <Link  to="/about" className={` ${style.hovers}`} >
               About Us
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
            <Link to="/contact" className={`${style.hovers}`}>Contact Us</Link>

@@ -36,9 +36,8 @@ function CartTable(props) {
               )
           }
          
-       
     </>
   )
 }
 
-export default CartTable
+export default CartTable;

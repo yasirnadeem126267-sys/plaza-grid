@@ -12,7 +12,7 @@ import Signup from './Components/Authentication/Signup'
 import Myprofile from './Components/userSide/Myprofile/Myprofile'
 import FAQ from './Components/userSide/FAQ/Faq'
 import { DataProvider } from './Components/userSide/DataContext' 
-
+import AboutUs from './Components/userSide/AboutUs/AboutUs'
 let App = () => {
   return (
     <>
@@ -42,6 +42,7 @@ let App = () => {
             <Route path='/signIn' element={<SignIn></SignIn>}></Route>
             <Route path='/userProfile' element={<Myprofile></Myprofile>}></Route>
             <Route path='/faq' element={<FAQ></FAQ>}></Route>
+            <Route path='/about' element={<AboutUs></AboutUs>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
