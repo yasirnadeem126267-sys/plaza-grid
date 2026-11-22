@@ -13,6 +13,7 @@ import Myprofile from './Components/userSide/Myprofile/Myprofile'
 import FAQ from './Components/userSide/FAQ/Faq'
 import { DataProvider } from './Components/userSide/DataContext' 
 import AboutUs from './Components/userSide/AboutUs/AboutUs'
+import Policies from './Components/userSide/Policies/Policies'
 let App = () => {
   return (
     <>
@@ -43,6 +44,7 @@ let App = () => {
             <Route path='/userProfile' element={<Myprofile></Myprofile>}></Route>
             <Route path='/faq' element={<FAQ></FAQ>}></Route>
             <Route path='/about' element={<AboutUs></AboutUs>}></Route>
+            <Route path='/policies' element={<Policies></Policies>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>

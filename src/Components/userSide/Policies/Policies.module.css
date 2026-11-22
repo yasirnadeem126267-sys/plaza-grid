@@ -1,0 +1,38 @@
+*{
+    background-color: none;
+}
+.top-banner{
+    min-height: 65vh;
+    background-color: #fff8f2;
+}
+.box{
+    min-height: 40vh;
+    
+}
+.fix-box1{
+    min-height: 52vh;
+}
+button.fix-button{
+     background-color: #ff5722;
+  color: #ffffff;
+  border-color: #ff5722;
+    --bs-btn-color: #ffffff;
+  --bs-btn-bg: #ff5722;
+  --bs-btn-border-color: #ff5722;
+   --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #e64a19;
+  --bs-btn-hover-border-color: #d84315;
+   --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: #d84315;
+  --bs-btn-active-border-color: #bf360c;
+}
+.hovers{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+.hovers:hover{
+  color: orange;
+  
+}

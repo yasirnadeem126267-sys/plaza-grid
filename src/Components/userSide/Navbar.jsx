@@ -57,9 +57,9 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="../Policies/policies.html">
+                <Link to="/policies" className={`dropdown-item ${style.hovers}`} >
                   Policies
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="dropdown-item" href="../Privacy/privacy.html">
