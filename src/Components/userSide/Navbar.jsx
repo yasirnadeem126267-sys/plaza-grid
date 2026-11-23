@@ -19,12 +19,11 @@ function Navbar() {
             <Link to='/' className={`${style.hovers} `}>Home</Link>
           </li>
           <li className="nav-item">
-            <a
-              className={`  ${style.hovers}`}
-              href="../Shop-Product-page/Shop-Product.html"
+            <Link to='/products'
+              className={` ${style.hovers}`}
             >
               Products
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <Link  to="/about" className={` ${style.hovers}`} >

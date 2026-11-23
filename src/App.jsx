@@ -14,6 +14,7 @@ import FAQ from './Components/userSide/FAQ/Faq'
 import { DataProvider } from './Components/userSide/DataContext' 
 import AboutUs from './Components/userSide/AboutUs/AboutUs'
 import Policies from './Components/userSide/Policies/Policies'
+import Products from './Components/userSide/Products/Products'
 let App = () => {
   return (
     <>
@@ -45,6 +46,7 @@ let App = () => {
             <Route path='/faq' element={<FAQ></FAQ>}></Route>
             <Route path='/about' element={<AboutUs></AboutUs>}></Route>
             <Route path='/policies' element={<Policies></Policies>}></Route>
+            <Route path='/products' element={<Products></Products>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
