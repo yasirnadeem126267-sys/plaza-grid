@@ -1,0 +1,39 @@
+.hero-div{
+    min-height: 55vh;
+    background-color: #fff8f2;
+
+}
+.text{
+    font-size: 17px;
+}
+.hovers{
+  text-decoration: none;
+  color: orange;
+  font-weight: 500;
+  font-size: 18px;
+}
+.hovers:hover{
+  color: orangered;
+}
+button.fix-button{
+     background-color: #ff5722;
+  color: #ffffff;
+  border-color: #ff5722;
+    --bs-btn-color: #ffffff;
+  --bs-btn-bg: #ff5722;
+  --bs-btn-border-color: #ff5722;
+   --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #e64a19;
+  --bs-btn-hover-border-color: #d84315;
+   --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: #d84315;
+  --bs-btn-active-border-color: #bf360c;
+}
+.link{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(39, 36, 36);
+}
+.link:hover{
+    color: orange;
+}

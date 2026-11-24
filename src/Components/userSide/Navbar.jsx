@@ -61,9 +61,9 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <a className="dropdown-item" href="../Privacy/privacy.html">
+                <Link  to='/privacy' className={` ${style.hovers} dropdown-item`}>
                   Privacy
-                </a>
+                </Link>
               </li>
               <li>
                 <a
