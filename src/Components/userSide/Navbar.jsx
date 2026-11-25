@@ -66,12 +66,12 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <a
-                  className="dropdown-item"
-                  href="../MyOrders-History/myOrders.html"
+                <Link to="/history"
+                  className={` ${style.hovers}  dropdown-item`}
+                  
                 >
                   History
-                </a>
+                </Link>
               </li>
               <li>
                 <a className="dropdown-item" href="../WishList/wishList.html">

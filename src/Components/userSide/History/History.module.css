@@ -1,0 +1,15 @@
+
+.productImage {
+    height: 130px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+    .productImage {
+        height: 100px;
+    }
+}

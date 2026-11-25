@@ -16,6 +16,7 @@ import AboutUs from './Components/userSide/AboutUs/AboutUs'
 import Policies from './Components/userSide/Policies/Policies'
 import Products from './Components/userSide/Products/Products'
 import Privacy from './Components/userSide/Privacy/Privacy'
+import History from './Components/userSide/History/History'
 let App = () => {
   return (
     <>
@@ -49,6 +50,7 @@ let App = () => {
             <Route path='/policies' element={<Policies></Policies>}></Route>
             <Route path='/products' element={<Products></Products>}></Route>
             <Route path='/privacy' element={<Privacy></Privacy>}></Route>
+            <Route path='/history' element={<History></History>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
