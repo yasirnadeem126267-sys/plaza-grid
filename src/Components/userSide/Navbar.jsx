@@ -74,9 +74,9 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <a className="dropdown-item" href="../WishList/wishList.html">
+                <Link     to='/wishlist'  className={`${style.hovers} dropdown-item`} >
                   Wish List
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
