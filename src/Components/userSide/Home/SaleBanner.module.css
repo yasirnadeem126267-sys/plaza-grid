@@ -1,0 +1,18 @@
+
+.banner {
+    background-color: #fff1e2;
+}
+
+.banner h1 {
+    color: #f58220;
+}
+
+.button {
+    background-color: #f58220;
+    color: white;
+}
+
+.button:hover {
+    background-color: #df6e10;
+    color: white;
+}

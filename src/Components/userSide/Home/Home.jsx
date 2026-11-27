@@ -5,6 +5,7 @@ import video1 from '../../../assets/video1.mp4';
 import video2 from '../../../assets/video2.mp4';
 import video3 from '../../../assets/video3.mp4';
 import video4 from '../../../assets/video4.mp4';
+import SaleBanner from './SaleBanner';
 import { useState, useContext, useEffect } from 'react';
 import Cart from '../Cart/Cart';
 import CartTable from '../Cart/CartTable';
@@ -251,6 +252,9 @@ function Home() {
         <Cart add={add} data={data} decrease={qtyDec} increase={qtyInc} quantity={qty} ></Cart>
         
           </div>
+
+          {/* Sale Banner */}
+          <SaleBanner></SaleBanner>
 
           {/* House Equipments row */}
       

@@ -53,6 +53,7 @@ let App = () => {
             <Route path='/privacy' element={<Privacy></Privacy>}></Route>
             <Route path='/history' element={<History></History>}></Route>
             <Route path='/wishlist' element={<WishList></WishList>}></Route>
+           
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
